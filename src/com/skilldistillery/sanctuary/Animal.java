@@ -1,24 +1,28 @@
 package com.skilldistillery.sanctuary;
 
-public class Animal {
+public abstract class Animal {
 	private String name;
-	
+	private int enclosure;
+
+	public Animal(String name) {
+		this.name = name;
+	}
+
 	public String getName() {
 		return name;
 	}
-	
-	public void makeNoise() {
-		System.out.println("Animal making noise ...");
-	}
-	
-	public void eat(int amountOfFood) {
-		System.out.println("I'm eating " + amountOfFood + " foods.");
-	}
-	
-	public static void main(String[] args) {
-		Animal animal = new Animal();
-		animal.makeNoise();
-		animal.eat(9);	
+
+	public void setName(String name) {
+		this.name = name;
 	}
 
+	public int getEnclosure() {
+		return enclosure;
+	}
+
+	public void setEnclosure(int enclosure) {
+		this.enclosure = enclosure;
+	}
+
+	public abstract void eat(int amountOfFood);
 }
