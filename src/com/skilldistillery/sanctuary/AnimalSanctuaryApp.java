@@ -61,7 +61,7 @@ public class AnimalSanctuaryApp {
 
 						System.out.print("Enter enclosure number (1-5) for the animal: ");
 						int enclosureNumber = scanner.nextInt();
-						scanner.nextLine(); // Consume newline character
+						scanner.nextLine();
 
 						if (sanctuary.isEnclosureAvailable(enclosureNumber)) {
 							animal.setEnclosure(enclosureNumber);
@@ -99,6 +99,19 @@ public class AnimalSanctuaryApp {
 				validResponse = true;
 			} else {
 				System.out.println("Incorrect response, try again.");
+			}
+		}
+
+		boolean quit = false;
+		while (!quit) {
+			System.out.println("Would you like to quit? Press Q or q for quit.");
+			String quitResponse = scanner.nextLine().trim().toLowerCase();
+
+			if (quitResponse.equals("q")) {
+				System.out.println("Quitting the application.");
+				quit = true;
+			} else {
+				System.out.println("Invalid entry: Press Q or q to Quit the app.");
 			}
 		}
 
