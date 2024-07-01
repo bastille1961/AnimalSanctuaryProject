@@ -8,6 +8,7 @@ public class Fox extends Animal {
 		this.noise = noise;
 	}
 
+	@Override
 	public void makeNoise() {
 		System.out.println(noise);
 	}

@@ -25,4 +25,8 @@ public abstract class Animal {
 	}
 
 	public abstract void eat(int amountOfFood);
+
+	public void makeNoise() {
+
+	}
 }

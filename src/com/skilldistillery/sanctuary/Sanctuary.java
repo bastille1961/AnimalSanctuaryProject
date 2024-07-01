@@ -26,6 +26,7 @@ public class Sanctuary {
 		return enclosureNumber >= 1 && enclosureNumber <= 5 && !enclosures[enclosureNumber - 1];
 	}
 
+	// Get the animals in the sanctuary
 	public Animal[] getAnimals() {
 		return animals;
 	}

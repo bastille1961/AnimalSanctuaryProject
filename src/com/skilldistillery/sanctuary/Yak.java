@@ -1,29 +1,21 @@
 package com.skilldistillery.sanctuary;
 
 public class Yak extends Animal {
-
-	private static String noise;
+	private String noise;
 
 	public Yak(String name, String noise) {
 		super(name);
-		this.setNoise(noise);
+		this.noise = noise;
 	}
 
+	@Override
 	public void makeNoise() {
-		System.out.println(getNoise());
-
+		System.out.println(noise);
 	}
 
+	@Override
 	public void eat(int amountOfFood) {
-		System.out.println(getNoise() + ", I love eating these " + amountOfFood
-				+ "grasses, herbs, wild flowers, mosses, tubers, and lichens.");
-	}
-
-	public static String getNoise() {
-		return noise;
-	}
-
-	public static void setNoise(String noise) {
-		Yak.noise = noise;
+		System.out.println(noise + ", I love eating these " + amountOfFood
+				+ " grasses, herbs, wild flowers, mosses, tubers, and lichens.");
 	}
 }
